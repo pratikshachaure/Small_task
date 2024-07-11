@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            width:100%;
+            margin: 0 auto;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        .child{
+            height: 300px;
+            width: 430px;
+            background-color: blueviolet;
+        }
+        @media screen and (max-width:767px) {
+            
+
+                .parent{
+                    padding: 10px;
+                }
+                .child{
+                    width: 100% !important;
+                }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1024px) {
+
+            .parent{
+                padding: 10px; 
+            }
+            .child{
+                width: calc(50% - 5px) !important;
+            }
+            
+        }
+        @media screen and (min-width: 1025px) {
+            .child {
+                max-width: 300px; /* Adjust for larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+        <div class="child">Hello</div>
+    </div>
+</body>
+</html>

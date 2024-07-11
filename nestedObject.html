@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let obj={
+  "library": {
+    "name": "City Central Library",
+    "address": {
+      "street": "789 Library Lane",
+      "city": "Booktown",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "sections": [
+      {
+        "name": "Fiction",
+        "books": [
+          {
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "year": 1960
+          },
+          {
+            "title": "1984",
+            "author": "George Orwell",
+            "year": 1949
+          }
+        ]
+      },
+      {
+        "name": "Non-Fiction",
+        "books": [
+          {
+            "title": "Sapiens",
+            "author": "Yuval Noah Harari",
+            "year": 2011
+          },
+          {
+            "title": "Educated",
+            "author": "Tara Westover",
+            "year": 2018
+          }
+        ]
+      }
+    ],
+    "members": [
+      {
+        "name": "Alice Johnson",
+        "membershipId": "M12345",
+        "borrowedBooks": [
+          {
+            "title": "To Kill a Mockingbird",
+            "dueDate": "2024-07-20"
+          }
+        ]
+      },
+      {
+        "name": "Bob Smith",
+        "membershipId": "M67890",
+        "borrowedBooks": []
+      }
+    ]
+  }
+}
+
+
+let findLengthofKey=Object.keys(obj).length;
+ function myfun(obj)
+ {
+    for(let i=0;i<findLengthofKey;i++)
+ {
+    let findallkeys=Object.values(obj)[i];
+     console.log(findallkeys) 
+if(typeof findallkeys=="object" && !Array.isArray(findallkeys))
+ {
+  console.log(findallkeys) 
+   myfun(findLengthofKey);
+ }
+ }
+ }
+
+ myfun(obj)
+    </script>
+</body>
+</html>

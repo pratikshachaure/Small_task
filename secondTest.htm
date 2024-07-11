@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #F6F5F2;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        .serviceElement {
+            height: 280px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding: 15px;
+             
+        }
+
+        .headingelement {
+
+            height: 280px;
+            width: 550px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 22px;
+            padding: 15px;
+            
+
+
+        }
+
+        .small_title {
+            color: orangered;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .heading {
+            font-size:2rem;
+            color: rgb(29, 28, 28);
+            line-height: 35px;
+        }
+
+        .contentelement {
+            font-size: 1.2rem;
+            line-height: 30px;
+            font-family: "Source Sans Pro", "Arial", sans-serif;
+        }
+
+        .blogContent {
+    display: flex;
+    flex-wrap: wrap;
+    height: 750px;
+    width: 100% !important;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    /* background-color: #FEFAF6; */
+}
+
+.blogContent div {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.blogelement {
+    border: 0.1px solid grey;
+    border-radius: 25px;
+    height: 300px;
+    width:400px;
+    background-color:whitesmoke;
+    
+}
+
+.blogelement:nth-child(1) {
+    /* flex: 0 1 calc(66.666% - 20px); */
+    height: 300px;
+    width: 850px;
+    background-image: url('https://www.shutterstock.com/image-vector/banner-design-template-cogs-gear-260nw-1901697289.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_element {
+    height: 120px;
+    width: 150px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.blogtitle {
+    font-size: 1.2rem;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    font-weight: 600;
+    color: rgb(66, 65, 65);
+}
+
+.infoelement {
+    width: 100%;
+    height: 60px;
+    font-size: 1.1rem;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    overflow: hidden;
+    transition: 0.5s;
+   
+    /* border: 1px solid gainsboro; */
+}
+p{
+    word-spacing: 10px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+
+}
+
+#infoelement {
+    width: 100%;
+    height: 100px;
+}
+
+.arrowlogo {
+    font-size: 0.9rem;
+    color: orangered;
+    font-weight: 700;
+}
+
+.position {
+    color: rgb(66, 65, 65);
+    /* font-size: 0.9rem; */
+    font-weight: 500;
+}
+
+            @media screen and (max-width:767px) {
+
+            .serviceElement{
+
+                height: 100% !important;
+                width: 100% !important;
+                display: grid;
+                grid-template-columns: auto !important; 
+            }
+            .headingelement{
+
+                height: auto !important;
+            }
+            .blogContent{
+
+                height: 100% !important;
+                width: 100% !important;
+                display: grid;
+                grid-template-columns: auto !important; 
+                padding:20px;
+            }
+            .blogelement{
+                height: auto !important;
+                width: 100% !important;
+            }
+            .infoelement{
+                height: auto !important;
+            }
+             
+
+            .headingelement{
+                width: 100% !important; 
+            }
+            .blogelement{
+                width: 100% !important;
+                margin-bottom: 15px;
+                height: auto;
+            }
+            .heading{
+                font-size: 1.8rem;
+            } 
+        }
+
+        @media screen and (min-width:768px) and (max-width:1024px) { 
+            .serviceElement {
+                height: 100% !important;
+                width: 100% !important;
+                display: grid;
+               grid-template-columns: auto;  
+               
+            }
+            .headingelement,.blogelement {
+                width:650px !important;
+                height: 200px !important; /* Ensures the height is responsive */
+                margin-bottom: 10px; /* Adds space between columns */
+            } 
+
+            .blogContent{
+                height: 100% !important;
+                width: 100% !important;
+                 display: grid;
+                 grid-template-columns: auto !important;
+                 justify-content: center;
+                 align-items: center;
+                 
+            }
+            .infoelement{
+                height: auto !important;
+            } 
+        }
+
+        
+.blogContent div {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.blogelement {
+    border: 0.1px solid grey;
+    border-radius: 25px;
+    height: 300px;
+    width:400px;
+    background-color:whitesmoke;
+    
+}
+
+.blogelement:nth-child(1) {
+    /* flex: 0 1 calc(66.666% - 20px); */
+    height: 300px;
+    width: 850px;
+    background-image: url('https://www.shutterstock.com/image-vector/banner-design-template-cogs-gear-260nw-1901697289.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+
+
+    </style>
+</head>
+                        
+<body>
+    <!-- <div class="serviceElement">
+
+        <div class="headingelement">
+            <div class="information">
+                <span class="small_title">Our Services</span>
+                <h2 class="heading">We leverage technology to transform your company digitally</h2>
+            </div>
+            <p class="contentelement">
+                Our structured suite of tailor-made software development and web & mobile app developers services is
+                designed to create scalable solutions that align with the goals of your business.
+            </p>
+        </div>
+    </div> -->
+
+    <div class="blogContent">
+
+        <div class="blogelement" >
+            <div class="img_element">
+                <img src="https://png.pngtree.com/png-vector/20221020/ourmid/pngtree-vector-black-line-glowing-idea-bulb-clipart-design-png-image_6352152.png" alt="">
+            </div>
+
+            <div class="infoelement" id="infoelement">
+                <span class="blogtitle">Product Engineer</span>
+
+                <p>
+                    Next-gen product engineering with our powerful Product Engineering services
+                </p>
+    
+                <span class="arrowlogo">
+                    Learn More
+                </span>
+    
+            </div>
+        </div>
+        <div class="blogelement" onmouseover="fewChange(this)" onmouseleave="removeChange(this)">
+
+            <div class="img_element">
+                <img src="https://cdn-icons-png.freepik.com/512/8129/8129822.png" alt="">
+            </div>
+            <div class="infoelement">
+                <span class="position">Expert COSULTING</span>
+                <span class="blogtitle">SASS App Developement</span> 
+                
+                <p>
+                    Next-gen product engineering with our powerful Product Engineering services
+                </p>
+    
+                <span class="arrowlogo">
+                    Learn More
+                </span>
+    
+            </div>
+        </div>
+        <div class="blogelement" onmouseover="fewChange(this)" onmouseleave="removeChange(this)" >
+
+            <div class="img_element">
+                <img src="https://cdn-icons-png.freepik.com/512/8129/8129822.png" alt="">
+            </div>
+            <div class="infoelement">
+                <span class="position">ENHANCE APP SPEED</span>
+                <span class="blogtitle">Cloud And Deveops Solutions</span>  
+                <p>
+                    Next-gen product engineering with our powerful Product Engineering services
+                </p>
+    
+                <span class="arrowlogo">
+                    Learn More
+                </span>
+    
+            </div>
+        </div>
+        <div class="blogelement" onmouseover="fewChange(this)" onmouseleave="removeChange(this)" >
+            <div class="img_element">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/172/975/original/artificial-intelligence-symbol-on-white-background-human-brain-with-circuit-digital-technology-concept-black-line-icon-tech-science-linear-pictogram-editable-stroke-isolated-illustration-vector.jpg" alt="">
+            </div>
+            <div class="infoelement">
+                <span class="position">AI EXPRETISE</span>
+                <span class="blogtitle">Generative AI Developement</span>  
+                <p>
+                    Next-gen product engineering with our powerful Product Engineering services
+                </p>
+    
+                <span class="arrowlogo">
+                    Learn More
+                </span>
+    
+            </div>
+        </div>
+        <div class="blogelement" onmouseover="fewChange(this)" onmouseleave="removeChange(this)" >
+            <div class="img_element">
+                <img src="https://media.istockphoto.com/id/1393673169/vector/customer-care-icon-like-business-relationship.jpg?s=612x612&w=0&k=20&c=VVRB-03FK8jKdTSZbcXQT9H1O8lN3irycylcX8uX1WE=" alt="">
+            </div>
+            <div class="infoelement">
+                <span class="position">TEAM EXTENSION</span>
+                <span class="blogtitle">Quality Assurance Services</span>  
+                <p>
+                    Next-gen product engineering with our powerful Product Engineering services
+                </p>
+    
+                <span class="arrowlogo">
+                    Learn More
+                </span>
+    
+            </div>
+        </div>
+    </div>
+
+<script>
+    function fewChange(ele)
+    {
+        ele.querySelector('.infoelement').style.height="300px";
+        // ele.querySelector('.infoelement').style.transition="3s";
+        ele.querySelector('.text').style.transition="0.2s"
+
+        
+    }
+
+    function removeChange(ele)
+    {
+        ele.querySelector('.infoelement').style.height="60px";
+        ele.querySelector('.text').style.transition="0.2s"
+
+    }
+</script>
+</body>
+
+</html>

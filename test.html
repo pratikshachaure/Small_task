@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .parent{
+             display: grid;
+             grid-template-columns: 430px 430px 430px;
+             grid-template-rows: 300px 300px;
+            height:630px;
+            width: 100%; 
+            gap:3px;
+             
+             
+        }
+        .child{
+             
+            background-color: pink;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        @media screen and (max-width:767px) {
+            .parent{
+                width: 100% !important;
+                height: 100% !important;
+                display: grid;
+                grid-template-columns: auto !important;
+                padding: 0px;
+               
+                
+            }
+            .child{
+                width: 100%!important;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            .parent{
+                width:100% !important;
+                height:100% !important;
+                display: grid;
+                grid-template-columns: auto auto !important; 
+                padding-left:0px; 
+                gap:15px; 
+        }
+         
+        }
+
+        
+         
+            
+        
+    </style>
+ </head>
+ <body>
+    <div class="parent">
+        <div class="child">Hellow</div>
+        <div class="child">Hellow</div>
+        <div class="child">Hellow</div>
+        <div class="child">Hellow</div>
+        <div class="child">Hellow</div>
+        <div class="child">Hellow</div>
+    </div> 
+    
+    
+ </body>
+ </html>

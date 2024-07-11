@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent{
+            height:280px;
+            width: 350px;
+            background-color: whitesmoke;
+            display: flex;
+            align-items:start;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding: 15px;
+        }
+        .main
+        {
+            display: flex;
+            height: 600px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .img{
+            height: 50px;
+            width: 60px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        .span{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .head{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .text{
+            font-size: 18px;
+            height: 25px; 
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="parent" onmouseover="myfun(this)" onmouseleave="second(this)">
+        <div class="img"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKQgH-gOSDhe27fJYzPPnl1m_xg-fQCPpIUHBnnywCCjiSM_Wa" alt=""></div>
+        <div class="span">AI Expertise</div>
+        
+        
+        <div class="text" id="text">
+            <div class="head">Generativ AI tools</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptatum.</div>
+    </div>
+
+    <div class="parent" onmouseover="myfun(this)" onmouseleave="second(this)">
+        <div class="img"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKQgH-gOSDhe27fJYzPPnl1m_xg-fQCPpIUHBnnywCCjiSM_Wa" alt=""></div>
+        <div class="span">AI HEllow</div>
+        
+        <div class="text" id="text">
+            <div class="head">Generativ AI tools</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptatum.</div>
+    </div>
+
+    <div class="parent" onmouseover="myfun(this)" onmouseleave="second(this)">
+        <div class="img"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKQgH-gOSDhe27fJYzPPnl1m_xg-fQCPpIUHBnnywCCjiSM_Wa" alt=""></div>
+        <div class="span">Hello to Me</div>
+        
+        <div class="text" id="text">
+            <div class="head">Generativ AI tools</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptatum.</div>
+    </div>
+
+    <div class="parent"  onmouseover="myfun(this)" onmouseleave="second(this)">
+        <div class="img"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKQgH-gOSDhe27fJYzPPnl1m_xg-fQCPpIUHBnnywCCjiSM_Wa" alt=""></div>
+        <div class="span">AI Bye</div>
+        
+        <div class="text" id="text">
+            <div class="head">Generativ AI tools</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptatum.</div>
+    </div>
+    <div class="parent"  onmouseover="myfun(this)" onmouseleave="second(this)">
+        <div class="img"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKQgH-gOSDhe27fJYzPPnl1m_xg-fQCPpIUHBnnywCCjiSM_Wa" alt=""></div>
+        <div class="span">AI Expertise</div>
+        
+        <div class="text" id="text">
+            <div class="head">Generativ AI tools</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptatum.</div>
+    </div>
+
+    <div class="parent"  onmouseover="myfun(this)" onmouseleave="second(this)">
+        <div class="img"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKQgH-gOSDhe27fJYzPPnl1m_xg-fQCPpIUHBnnywCCjiSM_Wa" alt=""></div>
+        <div class="span">AI Expertise</div>
+        
+        <div class="text" id="text">
+            <div class="head">Generativ AI tools</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, voluptatum.</div>
+    </div>
+
+</div>
+
+<i class="fa-solid fa-user"></i>
+    <script>
+        function myfun(ele)
+        {
+            ele.querySelector('.text').style.height="90px"
+            ele.querySelector('.text').style.transition="0.2s"
+        }
+        function second(ele){
+            ele.querySelector('.text').style.height="25px"
+            ele.querySelector('.text').style.transition="0.2s"
+
+
+        }
+
+        
+    </script>
+</body>
+</html>

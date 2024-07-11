@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      summary {
+            cursor: pointer;
+            outline: none;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .curso{
+          cursor: pointer;
+        }
+  </style>
+</head>
+<body>
+    <details>
+        <summary>Root</summary>
+        <ul id="json-tree"></ul>
+    </details>
+
+  <script>
+     const data = 
+        {
+  "store": {
+    "book": [ 
+      {
+        "category": "reference",
+        "author": "Nigel Rees",
+        "title": "Sayings of the Century",
+        "price": 8.95
+      }, {
+        "category": "fiction",
+        "author": "Evelyn Waugh",
+        "title": "Sword of Honour",
+        "price": 12.99
+      }, {
+        "category": "fiction",
+        "author": "Herman Melville",
+        "title": "Moby Dick",
+        "isbn": "0-553-21311-3",
+        "price": 8.99
+      }, {
+         "category": "fiction",
+        "author": "J. R. R. Tolkien",
+        "title": "The Lord of the Rings",
+        "isbn": "0-395-19395-8",
+        "price": 22.99
+      }
+    ],
+    "bicycle": {
+      "color": "red",
+      "price": 19.95
+    }
+  }
+}      
+
+      
+    function findNestedObjects(obj,parent) {
+
+        const ul = document.createElement('ul');
+        parent.appendChild(ul);
+       console.log(parent)
+      let keys = Object.keys(obj);
+      let values = Object.values(obj);
+
+      for (let i = 0; i < keys.length; i++) {
+        let key = keys[i];
+        let value = values[i];
+        const li = document.createElement('li');
+        ul.appendChild(li);
+
+
+        if (typeof value == 'object') {
+          console.log('Nested object found:', value);
+          const details = document.createElement('details');
+          const summary = document.createElement('summary');
+          summary.innerText = key;
+         details.appendChild(summary);
+         li.appendChild(details);
+        findNestedObjects(value,details);  // Recursive call to find nested objects within this object
+        }
+        else {
+                        let div = document.createElement("div");
+                        div.className = "curso";
+                        div.textContent = key + ': ' + value;
+                        li.appendChild(div);
+                    } 
+      }
+    } 
+
+    let jsonTree=document.getElementById('json-tree');
+    findNestedObjects(data,jsonTree);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Monoton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33042e1aad.js" crossorigin="anonymous"></script>
+    <title>Responsive Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            height: 60px;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            width: 900px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            margin-left: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        .fa-bars {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        #xmark {
+
+            display: none;
+        }
+
+        .logo {
+
+
+            height: 100%;
+            width: 125px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 767px) {
+            .nav {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: -100%;
+                width: 60%;
+                background-color: #e7268d;
+                transition: left 0.5s ease-in-out;
+            }
+
+            .nav.show {
+                left: 0;
+            }
+
+            .nav li {
+                margin: 10px 0;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+
+            #xmark {
+                display: block;
+                position: absolute;
+                right: 13px;
+                top: 5px;
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><img
+                src="https://www.gstatic.com/devrel-devsite/prod/vc3f2c9e1a38bbf17d13dba368cd3cbb8fa1d62d936b55c84ca4c54c7df2da66a/web/images/lockup.svg"
+                alt=""></div>
+               <ul class="nav" id="nav">
+            <li>
+            </li>
+
+            <li><i class="fa-solid fa-xmark" id="xmark" onclick="removefun()"></i></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">more</a></li>
+            <li><input type="search"></li>
+            <li>Language</li>
+            <li>Sign in</li>
+        </ul> 
+        <i class="fas fa-bars" id="toggleNav"></i>
+    </div>
+    <div class="parent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nostrum architecto iste pariatur, inventore
+        recusandae. Cumque quod tenetur corrupti fuga.
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleNav = document.getElementById('toggleNav');
+            const nav = document.getElementById('nav');
+            toggleNav.addEventListener('click', function () {
+                nav.classList.add('show');
+            });
+        });
+        function removefun() {
+            const nav = document.getElementById('nav');
+            let div = document.getElementById('xmark');
+            nav.addEventListener('click', function () {
+                nav.classList.remove('show');
+            });
+
+        }
+    </script>
+</body>
+
+</html>
